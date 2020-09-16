@@ -5,10 +5,23 @@
 !.gitignore
 !compton.conf
 
-!/polybar/*/
-!/i3/*/
-!/rofi/*/
-!/bspwm/*/
-!/sxhkd/*/
-!/htop/*/
+!/polybar
+!/polybar/*
+!/polybar/panel/*
+!/polybar/fonts/*
+!/polybar/scripts/*
+!/polybar/scripts/themes/*
+!/polybar/wallpaper/*
+!/polybar/wallpapers/*
+
+!/i3
+!/i3/*
+!/rofi
+!/rofi/*
+!/bspwm
+!/bspwm/*
+!/sxhkd
+!/sxhkd/*
+!/htop
+!/htop/*
 
