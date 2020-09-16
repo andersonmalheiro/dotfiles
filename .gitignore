@@ -16,12 +16,18 @@
 
 !/i3
 !/i3/*
+
 !/rofi
 !/rofi/*
+
 !/bspwm
 !/bspwm/*
+
 !/sxhkd
 !/sxhkd/*
+
 !/htop
 !/htop/*
 
+!/terminator
+!/terminator/*
