@@ -31,3 +31,9 @@
 
 !/terminator
 !/terminator/*
+
+!/autorandr
+!/autorandr/laptop-only/
+!/autorandr/laptop-only/*
+!/autorandr/monitor-left/
+!/autorandr/monitor-left/*
