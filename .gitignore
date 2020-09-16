@@ -1,0 +1,14 @@
+# Ignoring all files
+*
+
+# Whitelisting only the needed files and folders
+!.gitignore
+!compton.conf
+
+!/polybar/*/
+!/i3/*/
+!/rofi/*/
+!/bspwm/*/
+!/sxhkd/*/
+!/htop/*/
+
