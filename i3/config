@@ -29,20 +29,25 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# Gaps config
-for_window [class="^.*"] border pixel 3
-for_window [class="^.*"] border pixel 3
+## Gaps config
+for_window [class="^.*"] border pixel 0
 
 ## MPV Config
 for_window [class="mpv"] fullscreen disable, floating enable, resize set 640 480, move position center
 assign [class="mpv"] $ws4
 
-client.focused #EEE #EEE #EEE #EEE #EEE
+client.focused #999999 #999999 #999999 #999999 #999999
+client.unfocused #333333 #333333 #333333 #333333 #333333
 
 for_window [class="Dunst"] border pixel 1 
 
-gaps inner 10 
-gaps outer 5
+##### i3-gaps ##############
+gaps inner 10
+
+################# i3-radius #######################
+smart_borders on
+smart_borders no_gaps
+# border_radius 12
 
 # Gaps shortcuts
 bindsym $mod+z gaps outer current plus 5
@@ -51,7 +56,7 @@ bindsym $mod+Next gaps inner current minus 5
 bindsym $mod+Shift+z gaps outer current minus 5
 
 ## Open Terminal
-bindsym $mod+Return exec --no-startup-id terminator
+bindsym $mod+Return exec --no-startup-id alacritty
 # bindsym $mod+Return exec --no-startup-id terminator
 
 ## Google Chrome
@@ -70,19 +75,19 @@ bindsym $mod+Shift+s exec --no-startup-id spotify
 bindsym $mod+q kill
 
 ## Open clipboard Youtube vídeo on MPV
-bindsym $mod+y exec --no-startup-id mpv --ytdl-format=18 $1 "$(xclip -o -selection primary)" || i3-nagbar -t warning -m 'Error when playing video!'; 
+# bindsym $mod+y exec --no-startup-id mpv --ytdl-format=18 $1 "$(xclip -o -selection primary)" || i3-nagbar -t warning -m 'Error when playing video!'; 
 
 ## start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id $HOME/.config/polybar/scripts/menu_full
+bindsym $mod+d exec --no-startup-id $HOME/.config/polybar/material/scripts/launcher.sh
 
 ## Session management
-bindsym $mod+Ctrl+Delete exec --no-startup-id $HOME/.config/polybar/scripts/sysmenu
+bindsym $mod+Ctrl+Delete exec --no-startup-id $HOME/.config/polybar/material/scripts/powermenu.sh
 
 ## Print Screen
 bindsym --release Print exec gnome-screenshot -i
 
 ## Window switch
-bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+Tab exec --no-startup-id rofi -no-config -no-lazy-grab -show window -modi drun -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi
 
 ## YouTube Music
 bindsym $mod+Shift+y exec --no-startup-id google-chrome --app=https://music.youtube.com/
@@ -144,8 +149,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $laptop_screen "eDP-1"
-set $external_screen "DP-1"
+set $laptop_screen "DP-1"
+set $external_screen "HDMI-1"
 # set $laptop_screen "eDP-1-1"
 # set $external_screen "DP-1-1"
 
@@ -163,15 +168,15 @@ set $ws9 "9"
 set $ws10 "10"
 
 ## Bind workspaces to screens
-workspace $ws1 output $external_screen
-workspace $ws2 output $external_screen
-workspace $ws3 output $external_screen
-workspace $ws4 output $laptop_screen
-workspace $ws5 output $laptop_screen
-workspace $ws6 output $laptop_screen
-workspace $ws7 output $laptop_screen
-workspace $ws8 output $laptop_screen
-workspace $ws9 output $laptop_screen
+workspace $ws1 output $laptop_screen
+workspace $ws2 output $laptop_screen
+workspace $ws3 output $laptop_screen
+workspace $ws4 output $external_screen
+workspace $ws5 output $external_screen
+workspace $ws6 output $external_screen
+workspace $ws7 output $external_screen
+workspace $ws8 output $external_screen
+workspace $ws9 output $external_screen
 
 ## Assign app to workspace
 # assign [class="Google-chrome"] $ws1
@@ -246,13 +251,13 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Wallpaper
-exec_always --no-startup-id ~/.fehbg
+exec_always --no-startup-id sleep 1 && ~/.fehbg
 
 # Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id sleep 1 && ~/.config/polybar/launch.sh --material
 
 # Monitor config
-exec --no-startup-id ~/.screenlayout/screen-position.sh
+exec --no-startup-id sleep 1 && ~/screenlayout/desktop-vertical.sh
 
 # Fonts
 exec --no-startup-id xset +fp $HOME/.local/share/fonts
@@ -261,8 +266,8 @@ exec --no-startup-id xset fp rehash
 ## Network
 exec --no-startup-id nm-applet
 
-## Compton
-exec_always --no-startup-id killall -q compton; compton --config ~/.config/compton.conf
+## Compositor
+exec_always --no-startup-id sleep 1 && $HOME/.bin/beautify-windows
 
 ## Redshift
 exect_always --no-startup-id redshift
@@ -271,3 +276,7 @@ exec --no-startup-id pulseaudio
 
 # Autorandr
 exect_always --no-startup-id autorandr
+
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 3%+
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 3%-
+bindsym XF86AudioMute exec amixer -q sset Master toggle
