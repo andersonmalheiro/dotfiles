@@ -66,6 +66,7 @@ case $chosen in
     $suspend)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
+			i3lock -c 000000
 			mpc -q pause
 			amixer set Master mute
 			systemctl suspend
