@@ -1,0 +1,82 @@
+{
+  "layer": "top",
+  "height": 25,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode",
+    "cpu",
+    "memory",
+	"disk"
+  ],
+  "modules-center": [
+    "sway/window"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/clock",
+    "network",
+    "tray"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    }
+  },
+  "sway/window": {
+    "max-length": 50
+  },
+  "pulseaudio": {
+    "format": "🔊 {volume}%",
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "on-click-right": "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "🔅 {percent}%",
+    "on-click": "brightnessctl -q set 10%-",
+    "on-click-right": "brightnessctl -q set +10%",
+    "on-scroll-up": "brightnessctl -q set +1%",
+    "on-scroll-down": "brightnessctl -q set 1%-"
+  },
+  "battery": {
+    "format": "🔋{capacity}%"
+  },
+  "custom/clock": {
+    "exec": "date +'📅 %x %H:%M'",
+    "interval": 1
+  },
+  "network": {
+    "format-wifi": "📶 {essid}",
+    "format-ethernet": "{ifname}",
+    "format-disconnected": "",
+    "max-length": 50,
+    "on-click": "kitty -e 'nmtui'"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "🧠 {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 1,
+    "format": "📈 {used:0.1f}Gb"
+  },
+  "disk": {
+    "interval": 30,
+    "format": "🗄 {percentage_free}%",
+    "path": "/"
+  }
+}
