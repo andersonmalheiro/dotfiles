@@ -42,7 +42,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: full 
 
   # Startup Mode (changes require restart)
   #
@@ -71,17 +71,17 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: JetBrains Mono
+    family: Droid Sans Mono
     style: Regular
 
   # The bold font face
   bold:
-    family: JetBrains Mono
+    family: Droid Sans Mono
     style: Bold
 
   # The italic font face
   italic:
-    family: JetBrains Mono
+    family: Droid Sans Mono
     style: Italic
 
   # Point size of the font
@@ -100,23 +100,7 @@ font:
     x: 0
     y: 0
 
-  # Thin stroke font rendering (macOS only)
-  #
-  # Thin strokes are suitable for retina displays, but for non-retina you
-  # probably want this set to false.
-  #
-  # macOS >= 10.14.x:
-  #
-  # If the font quality on non-retina display looks bad then set
-  # `use_thin_strokes` to `true` and enable font smoothing by running the
-  # following command:
-  #   `defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO`
-  #
-  # This is a global setting and will require a log out or restart to take
-  # effect.
-  use_thin_strokes: true
-
-# When true, bold text is drawn using the bright variant of colors.
+ # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
@@ -190,7 +174,7 @@ bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.9
+opacity: 0.9
 
 # Key bindings
 #
