@@ -1,0 +1,141 @@
+@import "colors.rasi"
+
+configuration {
+	font:							"Fantasque Sans Mono 10";
+    show-icons:                     true;
+	icon-theme: 					"Papirus";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    fullscreen:                     false;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+
+    drun {
+        display-name: "";
+    }
+
+    run {
+        display-name: "";
+    }
+
+    window {
+        display-name: "";
+    }
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+
+    background-color: @mantle;
+    text-color: @text;
+}
+
+window {
+    transparency:                   "real";
+    background-color:               @mantle;
+    text-color:                     @text;
+	border:							0px;
+    border-radius:                  0px;
+	width:							550px;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
+    padding:                        10px;
+}
+
+mainbox {
+    background-color:               @mantle;
+	border:							0px;
+    border-radius:                  0px;
+    children:                       [ inputbar, listview ];
+    spacing:                       	0px;
+    padding:                        0px;
+}
+
+inputbar {
+	children: 						[ prompt, entry ];
+    background-color:               @mantle;
+    text-color:                     @text;
+    expand:                         false;
+	border:							0px;
+    margin:                         0px 0px 10px 0px;
+}
+
+prompt {
+    text-color:                     @subtext1;
+    enabled: 						true;
+	padding: 						5px 10px;
+    border:                         0px;
+	background-color: 				@surface0;
+	font:							"Fantasque Sans Mono 12";
+}
+
+entry {
+    background-color: 				@surface1;
+    font:							"Fantasque Sans Mono 12";
+    padding:                        5px 10px;
+    text-color:                     @text;
+    placeholder-color:              @text;
+    expand:                         true;
+    border:							0px;
+    horizontal-align:               0;
+    placeholder:                    "Search...";
+    blink:                          true;
+}
+
+listview {
+    background-color:               @mantle;
+    padding:                        0px;
+    columns:                        1;
+    border:                         0px;
+    lines:                          8;
+    spacing:                        8px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+element {
+  children: [element-icon, element-text];
+  background-color: @surface0;
+  border: 0px;
+  border-color: @surface0;
+  spacing: 0;
+  text-color: @text;
+}
+
+element-icon {
+  padding: 10px;
+  border: 0px;
+  border-color: @surface0;
+  background-color: @surface0;
+}
+
+element-text {
+  padding: 10px;
+  border: 0px;
+  border-color: @surface0;
+  background-color: @surface0;
+  text-color: @text;
+}
+
+element selected {
+    border: 0px;
+    background-color: @lavender;
+    text-color: @base;
+}
+
+element-icon selected {
+  background-color: @lavender;
+}
+
+
+element-text selected {
+  text-color: @base;
+  background-color: @lavender;
+}
+
+/* vim:ft=css
