@@ -3,6 +3,8 @@
 ## How to use
 Just copy the contents of this repo inside the `.config` folder in your home directory.
 
+(If you use Manjaro i3 version, most things will be configured by default, these settings will customize it)
+
 you can ignore these dirs:
 - bspwm
 - sxhkd
@@ -14,6 +16,8 @@ you can ignore these dirs:
 Most of the programs can be installed with a package manager in any linux distro
 
 ```
+- i3wm                    (window manager)
+- i3lock                  (screen lock)
 - thunar                  (file manager)
 - firefox                 (browser)
 - vs code                 (code editor)
@@ -24,13 +28,16 @@ Most of the programs can be installed with a package manager in any linux distro
 - polybar                 (system bar)
 - alacritty               (terminal)
 - zathura                 (PDF viewer)
-- autorandr               (Screen layout)
+- autorandr               (screen layout)
 - dunst                   (notifications)
+- vim                     (text editor)
 ```
 
 ## Polybar
 It's necessary to install Material Icons font for the icons work properly
 [link](https://github.com/google/material-design-icons/blob/master/font/MaterialIcons-Regular.ttf)
+
+Just download and put it inside `$HOME/.local/share/fonts`
 
 ## Dual monitors
 If you use dual monitors, you will need to configure the layout using `autorandr` tool. When it's done, save the configuration as a sh file, in the `.screenlayout` directory
