@@ -3,6 +3,13 @@
 ## How to use
 Just copy the contents of this repo inside the `.config` folder in your home directory.
 
+you can ignore these dirs:
+- bspwm
+- sxhkd
+- sway
+- waybar
+- terminator
+
 ## Programs and dependencies
 Most of the programs can be installed with a package manager in any linux distro
 
@@ -18,6 +25,7 @@ Most of the programs can be installed with a package manager in any linux distro
 - alacritty               (terminal)
 - zathura                 (PDF viewer)
 - autorandr               (Screen layout)
+- dunst                   (notifications)
 ```
 
 ## Polybar
