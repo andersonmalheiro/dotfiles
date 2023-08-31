@@ -1,0 +1,25 @@
+polybar|notice:  Parsing config file: /home/major/.config/polybar/config.ini
+polybar|notice:  Listening for IPC messages (PID: 1094)
+polybar|notice:  Loading module 'i3' of type 'internal/i3'
+polybar|notice:  Loading module 'xwindow' of type 'internal/xwindow'
+polybar|notice:  Loading module 'filesystem' of type 'internal/fs'
+polybar|notice:  Loading module 'pulseaudio' of type 'internal/pulseaudio'
+polybar|notice:  pulseaudio: using default sink 
+polybar|notice:  Loading module 'xkeyboard' of type 'internal/xkeyboard'
+polybar|notice:  Loading module 'memory' of type 'internal/memory'
+polybar|notice:  Loading module 'cpu' of type 'internal/cpu'
+polybar|notice:  Loading module 'eth' of type 'internal/network'
+polybar|notice:  module/eth: Discovered wired interface enp5s0
+polybar|notice:  Loading module 'date' of type 'internal/date'
+polybar|notice:  Loaded 9 modules
+polybar|notice:  Loaded font "Fantasque Sans Mono:pixelsize=10" (name=Fantasque Sans Mono, offset=2, file=/home/major/.local/share/fonts/fantasque_sans_mono.ttf)
+polybar|notice:  Loaded font "Material Icons:pixelsize=10" (name=Material Icons, offset=3, file=/home/major/.local/share/fonts/MaterialIcons-Regular.ttf)
+polybar|warn:  background_manager: Failed to get root pixmap, default to black (is there a wallpaper?)
+polybar|warn:  Ignoring restack of i3 window (not needed when `override-redirect = false`)
+polybar|warn:  background_manager: Failed to get root pixmap, default to black (is there a wallpaper?)
+polybar|error: tray: Failed to put tray above 0x2600002 in the stack (XCB_MATCH (8))
+polybar|notice:  pulseaudio: using default sink alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo
+polybar|notice:  pulseaudio: using default sink alsa_output.usb-Logitech_PRO_000000000000-00.analog-stereo
